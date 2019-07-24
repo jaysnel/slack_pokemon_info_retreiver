@@ -2,7 +2,7 @@ const axios = require('axios');
 const SlackBot = require('slackbots');
 
 const bot = new SlackBot({
-    token: 'Sorry, Have To Get Your Own Token!',
+    token: 'xoxb-702476985031-700987600325-gtR0zj6oHT9aK7x0TndwKl7L',
     name: 'Pokemon Info Retriever'
 })
 
@@ -49,7 +49,7 @@ function handleMessage(message) {
             exactMatch.toLowerCase();
             for(let i = 0; i <= pokemonArray.length - 1; i++) {
                 if(exactMatch === pokemonArray[i]) {
-                    x = pokemonArray[i].toLowerCase();
+                    pokeUrl = pokemonArray[i].toLowerCase();
                     getPokemonData();
                 }
             }
