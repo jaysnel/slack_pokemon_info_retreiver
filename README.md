@@ -3,4 +3,5 @@ Slack bot that works out of the 'general' channel of your Slack work space. Use 
 
 
 For help type "@pokemon_retriever help"
+
 Type in "@pokemon_retriever POKEMON_NAME" in order to display Pokemon Information!
