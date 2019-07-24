@@ -1,8 +1,3 @@
-let x = '';
-let pokemonArray = [];
-let helpWanted = 'Type in "@pokemon_retriever POKEMON_NAME" in order to display Pokemon Information!'
-
-
 const axios = require('axios');
 const SlackBot = require('slackbots');
 
@@ -10,6 +5,11 @@ const bot = new SlackBot({
     token: 'Sorry, Have To Get Your Own Token!',
     name: 'Pokemon Info Retriever'
 })
+
+
+let x = '';
+let pokemonArray = [];
+let helpWanted = 'Type in "@pokemon_retriever POKEMON_NAME" in order to display Pokemon Information!'
 
 
 
