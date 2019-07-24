@@ -7,7 +7,7 @@ const bot = new SlackBot({
 })
 
 
-let x = '';
+let pokeUrl = '';
 let pokemonArray = [];
 let helpWanted = 'Type in "@pokemon_retriever POKEMON_NAME" in order to display Pokemon Information!'
 
@@ -62,7 +62,7 @@ function handleMessage(message) {
 
 // Getting All Pokemon Info Needed
 function getPokemonData() {
-    axios.get('https://pokeapi.co/api/v2/pokemon/' + x)
+    axios.get('https://pokeapi.co/api/v2/pokemon/' + pokeUrl)
     .then((res) => {
     
     // All Pokemon Info
@@ -77,7 +77,7 @@ function getPokemonData() {
         pokemonType.push(pokemonTypeInfo[i].type.name);
     }
 
-    const pokemonInfo = x.toUpperCase() + ': ' + thePokemon + 
+    const pokemonInfo = pokeUrl.toUpperCase() + ': ' + thePokemon + 
     '\n' +  
     'Index: #' + thePokemonIndex +
     '\n' + 
